@@ -2,6 +2,7 @@
   "name": "react-tag-cloud-example",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "randomcolor": "^0.5.3",
     "react": "^16.0.0",
