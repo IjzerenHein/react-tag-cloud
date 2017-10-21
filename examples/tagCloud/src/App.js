@@ -16,7 +16,7 @@ const styles = {
 class App extends Component {
   componentDidMount() {
     setInterval(() => {
-      // this.forceUpdate();
+      this.forceUpdate();
     }, 3000);
   }
 
@@ -37,7 +37,6 @@ class App extends Component {
               padding: 5,
             }}>
             <div
-              // rotate={90}
               style={{
                 fontFamily: 'serif',
                 fontSize: 40,
