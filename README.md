@@ -70,10 +70,16 @@ style.color | Color to be used by tag | Function/String | `(none)`
 rotate | Rotation in degrees | Function/Number | `0`
 
 
+## Examples
+
+- [example](./examples/src/App.js)
+
+
 ## Resources
 
 - [https://github.com/jasondavies/d3-cloud](https://github.com/jasondavies/d3-cloud)
 - [https://en.wikipedia.org/wiki/Tag_cloud](https://en.wikipedia.org/wiki/Tag_cloud)
+
 
 ## License
 
