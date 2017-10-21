@@ -23,7 +23,6 @@ class MyCloud extends Component {
   render() {
     return (
       <TagCloud 
-        className='tag-cloud'
         style={{
           fontFamily: 'sans-serif',
           fontSize: 30,
@@ -58,7 +57,7 @@ rotate | Rotation in degrees | Function/Number | `0`
 spiral | Spiral | Function/String | `archimedean`
 random | Randomizer function | Function | `Math.random`
 
-Any component can be used as a child component. `TagCloud` scans the child componentsfor the following props for its layout calculation:
+Any component can be used as a child component. `TagCloud` scans the child components for the following props for its layout calculation:
 
 name | description | type | default
 -----|-------------|------|---------
@@ -69,7 +68,6 @@ style.fontStyle | Font style needed for calculating layout | Function/String | `
 style.padding | Padding between tags (px) | Function/Number | `1`
 style.color | Color to be used by tag | Function/String | `(none)`
 rotate | Rotation in degrees | Function/Number | `0`
-
 
 
 ## Resources
