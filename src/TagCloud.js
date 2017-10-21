@@ -71,7 +71,7 @@ class TagCloud extends Component {
 		this.padding = this.getStyleValue.bind(this, 'padding');
 		this.rotate = this.rotate.bind(this);
 		this.onResize = this.onResize.bind(this);
-	};
+	}
 
 	componentWillReceiveProps(nextProps) {
 		this.updateLayout(nextProps, true);
@@ -87,7 +87,7 @@ class TagCloud extends Component {
 		this.calculateLayout(props).then((children) => {
 			this.setState({
 				wrappedChildren: children
-			});	
+			});
 		});
 	}
 
@@ -106,7 +106,7 @@ class TagCloud extends Component {
 				.fontWeight(this.fontWeight)
 				.fontSize(this.fontSize)
 				.rotate(this.rotate)
-				.spiral(spiral)	
+				.spiral(spiral)
 				.padding(this.padding)
 				.random(random)
 				.on('end', (items) => {
@@ -159,7 +159,7 @@ class TagCloud extends Component {
 		}
 		else {
 			return value;
-		}	
+		}
 	}
 
 	text(word) {
@@ -188,10 +188,10 @@ class TagCloud extends Component {
 			if (this._resizeTimer) clearTimeout(this._resizeTimer);
 			this._resizeTimer = setTimeout(() => {
 				this._resizeTimer = undefined;
-				this.updateLayout(this.props);	
+				this.updateLayout(this.props);
 			}, 100);
 		}
 	}
- }
+}
 
- export default TagCloud;
+export default TagCloud;
