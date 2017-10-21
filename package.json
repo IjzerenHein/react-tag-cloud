@@ -1,0 +1,33 @@
+{
+  "name": "react-tag-cloud",
+  "version": "1.0.0",
+  "description": "Render a cloud of tags/words using React",
+  "main": "dist/TagCloud.js",
+  "repository": "https://github.com/IjzerenHein/react-tag-cloud",
+  "author": "IjzerenHein <hrutjes@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "d3-cloud": "^1.2.4",
+    "react-measure": "^2.0.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.8.1"
+  }
+}

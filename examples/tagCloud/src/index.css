@@ -1,0 +1,47 @@
+body {
+ 	font-family: sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+ 	margin: 0;
+ 	padding: 0;
+}
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	opacity: 0.5;
+}
+
+.app-outer {
+	align-items: center; 
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	left: 0;
+	padding: 20px 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.app-inner {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.tag-cloud {
+	flex: 1;
+}
+
+.tag-cloud > div {
+	transition: 1.4s;
+}
