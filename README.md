@@ -1,4 +1,4 @@
-# react-tag-cloud
+# react-tag-cloud ☁️
 Create beautiful tag/word clouds using React. Uses the wonderful [d3-cloud](https://github.com/jasondavies/d3-cloud) under the hood.
 
 ![react-tag-cloud-image](./react-tag-cloud.gif)
