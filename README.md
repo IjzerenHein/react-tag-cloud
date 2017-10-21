@@ -72,7 +72,7 @@ rotate | Rotation in degrees | Function/Number | `0`
 
 ## Examples
 
-- [example](./examples/src/App.js)
+- [example](./examples/tagCloud/src/App.js)
 
 
 ## Resources
