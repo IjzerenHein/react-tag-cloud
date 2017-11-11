@@ -2,6 +2,16 @@
   "name": "react-tag-cloud",
   "version": "1.0.1",
   "description": "Create beautiful tag/word clouds using React",
+  "keywords": [
+    "react-tag-cloud",
+    "tag-cloud",
+    "word-cloud",
+    "d3-cloud",
+    "react-cloud",
+    "react-word-cloud",
+    "react-words",
+    "react-tags"
+  ],
   "main": "dist/TagCloud.js",
   "repository": "https://github.com/IjzerenHein/react-tag-cloud",
   "author": "IjzerenHein <hrutjes@gmail.com>",
