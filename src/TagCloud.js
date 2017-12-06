@@ -163,7 +163,19 @@ class TagCloud extends Component {
 	}
 
 	text(word) {
-		return word.child.props.children;
+		let text = word.child.props.text;
+
+		if (!text) {
+			const children = word.child.props.children;
+
+			if (Array.isArray(children)) {
+				text = children[0];
+			} else {
+				text = children;
+			}
+		}
+
+		return text;
 	}
 
 	render() {
