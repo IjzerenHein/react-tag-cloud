@@ -4,7 +4,7 @@ Create beautiful tag/word clouds using React. Uses the wonderful [d3-cloud](http
 ![react-tag-cloud-image](./react-tag-cloud.gif)
 
 
-[View live demo here](https://cdn.rawgit.com/IjzerenHein/react-tag-cloud/d706091d/examples/tagCloud/build/index.html)
+[View live demo here](https://stackblitz.com/edit/react-tag-cloud?file=App.js) [fullscreen](https://react-tag-cloud.stackblitz.io/)
 
 
 ## Installation
@@ -72,7 +72,7 @@ rotate | Rotation in degrees | Function/Number | `0`
 
 ## Examples
 
-- [example](./examples/tagCloud/src/App.js)
+- Example [(view)](https://react-tag-cloud-app.stackblitz.io) [(source)](./examples/tagCloud/src/App.js) [(Playground on StackBlitz)](https://stackblitz.com/edit/react-tag-cloud?file=App.js) 
 - [ijzerenhein.nl](http://ijzerenhein.nl/)
 
 
