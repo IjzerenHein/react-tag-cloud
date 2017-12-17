@@ -45,8 +45,8 @@ class App extends Component {
                 fontWeight: 'bold',
                 color: randomColor()
               }}>Futurama</div>
-            <CloudItem text="I Am Custom Cloud Item!" />
-            <CloudItem text="I Am Custom Cloud Item 1!" />
+            <CloudItem text="Custom item, Hover me!" />
+            <CloudItem text="Custom item 2, Hover me!" />
             <div style={styles.large}>Transformers</div>
             <div style={styles.large}>Simpsons</div>
             <div style={styles.large}>Dragon Ball</div>
