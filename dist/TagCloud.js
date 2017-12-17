@@ -216,7 +216,19 @@ var TagCloud = function (_Component) {
 	}, {
 		key: 'text',
 		value: function text(word) {
-			return word.child.props.children;
+			var text = word.child.props.text;
+
+			if (!text) {
+				var children = word.child.props.children;
+
+				if (Array.isArray(children)) {
+					text = children[0];
+				} else {
+					text = children;
+				}
+			}
+
+			return text;
 		}
 	}, {
 		key: 'render',
