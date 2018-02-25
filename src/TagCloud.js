@@ -64,7 +64,7 @@ class TagCloud extends Component {
 			wrappedChildren: []
 		};
 		this.text = this.text.bind(this);
-		this.fontFamily = this.getStyleValue.bind(this, 'font');
+		this.fontFamily = this.getStyleValue.bind(this, 'fontFamily');
 		this.fontSize = this.getStyleValue.bind(this, 'fontSize');
 		this.fontWeight = this.getStyleValue.bind(this, 'fontWeight');
 		this.fontStyle = this.getStyleValue.bind(this, 'fontStyle');
