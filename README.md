@@ -29,7 +29,9 @@ class MyCloud extends Component {
           fontWeight: 'bold'
           fontStyle: 'italic'
           color: () => randomColor(),
-          padding: 5
+          padding: 5,
+          width: '100%',
+          height: '100%'
         }}>
         <div style={{fontSize: 50}}>react</div>
         <div style={{color: 'green'}}>tag</div>
