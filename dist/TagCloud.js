@@ -119,7 +119,7 @@ var TagCloud = function (_Component) {
 			wrappedChildren: []
 		};
 		_this.text = _this.text.bind(_this);
-		_this.fontFamily = _this.getStyleValue.bind(_this, 'font');
+		_this.fontFamily = _this.getStyleValue.bind(_this, 'fontFamily');
 		_this.fontSize = _this.getStyleValue.bind(_this, 'fontSize');
 		_this.fontWeight = _this.getStyleValue.bind(_this, 'fontWeight');
 		_this.fontStyle = _this.getStyleValue.bind(_this, 'fontStyle');
@@ -168,17 +168,24 @@ var TagCloud = function (_Component) {
 					return { child: child };
 				})).text(_this3.text).font(_this3.fontFamily).fontStyle(_this3.fontStyle).fontWeight(_this3.fontWeight).fontSize(_this3.fontSize).rotate(_this3.rotate).spiral(spiral).padding(_this3.padding).random(random).on('end', function (items) {
 					var newChildren = items.map(function (item, index) {
-						var x = item.x + width / 2 + item.width / -2;
-						var y = item.y + height / 2 + item.height / -2;
+						var x = item.x;
+						x += item.x0;
+						x += width / 2;
+						var y = item.y;
+						y += item.y0;
+						y += height / 2;
 						var style = _extends({
 							position: 'absolute'
 						}, item.child.props.style, {
 							fontFamily: item.font,
-							fontSize: item.size - 2,
+							fontSize: item.size,
 							fontWeight: item.weight,
 							fontStyle: item.style,
 							transform: 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)',
-							transformOrigin: 'left center'
+							width: item.width,
+							textAlign: 'center',
+							whiteSpace: 'nowrap',
+							transformOrigin: 'center bottom'
 						});
 						if (!style.color && _this3.props.style.color && typeof _this3.props.style.color === 'function') {
 							style.color = _this3.props.style.color(item.child, index);
