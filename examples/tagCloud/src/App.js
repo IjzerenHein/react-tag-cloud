@@ -28,9 +28,10 @@ class App extends Component {
           <h1>react-tag-cloud demo</h1>
           <TagCloud 
             className='tag-cloud'
+            rotate={() => Math.round(Math.random()) * 90}
             style={{
               fontFamily: 'sans-serif',
-              //fontSize: () => Math.round(Math.random() * 50) + 16,
+              // fontSize: () => Math.round(Math.random() * 50) + 16,
               fontSize: 30,
               color: () => randomColor({
                 hue: 'blue'
