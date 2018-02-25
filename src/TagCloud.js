@@ -111,17 +111,24 @@ class TagCloud extends Component {
 				.random(random)
 				.on('end', (items) => {
 					const newChildren = items.map((item, index) => {
-						const x = item.x + (width / 2) + (item.width / -2);
-						const y = item.y + (height / 2) + (item.height / -2);
+						let x = item.x;
+						x += item.x0;
+						x += (width / 2);
+						let y = item.y;
+						y += item.y0;
+						y += (height / 2);
 						const style = {
 							position: 'absolute',
 							...item.child.props.style,
 							fontFamily: item.font,
-							fontSize: item.size - 2,
+							fontSize: item.size,
 							fontWeight: item.weight,
 							fontStyle: item.style,
 							transform: `translate(${x}px,${y}px) rotate(${item.rotate}deg)`,
-							transformOrigin: 'left center'
+							width: item.width,
+							textAlign: 'center',
+							whiteSpace: 'nowrap',
+							transformOrigin: 'center bottom'
 						};
 						if (!style.color && this.props.style.color && (typeof this.props.style.color === 'function')) {
 							style.color = this.props.style.color(item.child, index);
