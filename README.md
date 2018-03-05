@@ -26,8 +26,8 @@ class MyCloud extends Component {
         style={{
           fontFamily: 'sans-serif',
           fontSize: 30,
-          fontWeight: 'bold'
-          fontStyle: 'italic'
+          fontWeight: 'bold',
+          fontStyle: 'italic',
           color: () => randomColor(),
           padding: 5,
           width: '100%',
