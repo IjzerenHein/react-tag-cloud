@@ -130,6 +130,20 @@ var TagCloud = function (_Component) {
 	}
 
 	_createClass(TagCloud, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			this._mounted = true;
+		}
+	}, {
+		key: 'componentWillUnmount',
+		value: function componentWillUnmount() {
+			if (this._resizeTimer) {
+				clearTimeout(this._resizeTimer);
+				this._resizeTimer = undefined;
+			}
+			this._mounted = false;
+		}
+	}, {
 		key: 'componentWillReceiveProps',
 		value: function componentWillReceiveProps(nextProps) {
 			this.updateLayout(nextProps, true);
@@ -146,6 +160,7 @@ var TagCloud = function (_Component) {
 			}
 
 			this.calculateLayout(props).then(function (children) {
+				if (!_this2._mounted) return;
 				_this2.setState({
 					wrappedChildren: children
 				});

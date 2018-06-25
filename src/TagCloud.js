@@ -73,6 +73,18 @@ class TagCloud extends Component {
 		this.onResize = this.onResize.bind(this);
 	}
 
+	componentDidMount() {
+		this._mounted = true;
+	}
+
+	componentWillUnmount() {
+		if (this._resizeTimer) {
+			clearTimeout(this._resizeTimer);
+			this._resizeTimer = undefined;
+		}
+		this._mounted = false;
+	}
+
 	componentWillReceiveProps(nextProps) {
 		this.updateLayout(nextProps, true);
 	}
@@ -85,6 +97,7 @@ class TagCloud extends Component {
 		}
 
 		this.calculateLayout(props).then((children) => {
+			if (!this._mounted) return;
 			this.setState({
 				wrappedChildren: children
 			});
