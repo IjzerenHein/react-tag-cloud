@@ -112,37 +112,28 @@ class TagCloud extends Component {
             let y = item.y;
             y += item.y0;
             y += height / 2;
-            let style = null;
-            if (!("transform" in document.body.style)) {
-              style = {
-                position: "absolute",
-                ...item.child.props.style,
-                fontFamily: item.font,
-                fontSize: item.size,
-                fontWeight: item.weight,
-                fontStyle: item.style,
-                WebkitTransform: `translate(${x}px,${y}px) rotate(${
-                  item.rotate
-                }deg)`,
-                width: item.width,
-                textAlign: "center",
-                whiteSpace: "nowrap",
-                transformOrigin: "center bottom"
-              };
-            } else
-              style = {
-                position: "absolute",
-                ...item.child.props.style,
-                fontFamily: item.font,
-                fontSize: item.size,
-                fontWeight: item.weight,
-                fontStyle: item.style,
-                transform: `translate(${x}px,${y}px) rotate(${item.rotate}deg)`,
-                width: item.width,
-                textAlign: "center",
-                whiteSpace: "nowrap",
-                transformOrigin: "center bottom"
-              };
+            let style = {
+              position: "absolute",
+              ...item.child.props.style,
+              fontFamily: item.font,
+              fontSize: item.size,
+              fontWeight: item.weight,
+              fontStyle: item.style,
+              width: item.width,
+              textAlign: "center",
+              whiteSpace: "nowrap",
+              transformOrigin: "center bottom"
+            };
+
+            if (!("transform" in document.body.style))
+              style["WebkitTransform"] = `translate(${x}px,${y}px) rotate(${
+                item.rotate
+              }deg)`;
+            else
+              style["transform"] = `translate(${x}px,${y}px) rotate(${
+                item.rotate
+              }deg)`;
+
             if (
               !style.color &&
               this.props.style.color &&
