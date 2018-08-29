@@ -130,6 +130,7 @@ class TagCloud extends Component {
 						let y = item.y;
 						y += item.y0;
 						y += (height / 2);
+						const transform = `translate(${x}px,${y}px) rotate(${item.rotate}deg)`;
 						const style = {
 							position: 'absolute',
 							...item.child.props.style,
@@ -140,16 +141,13 @@ class TagCloud extends Component {
 							width: item.width,
 							textAlign: 'center',
 							whiteSpace: 'nowrap',
-							transformOrigin: 'center bottom'
-						};
-						if (!("transform" in document.body.style))
-							style["WebkitTransform"] = `translate(${x}px,${y}px) rotate(${
-								item.rotate
-								}deg)`;
-						else
-							style["transform"] = `translate(${x}px,${y}px) rotate(${
-								item.rotate
-								}deg)`;
+							transformOrigin: 'center bottom',
+							WebkitTransform: transform,
+							MozTransform: transform,
+							MsTransform: transform,
+							OTransform: transform,
+							transform: transform,
+						};						
 						if (!style.color && this.props.style.color && (typeof this.props.style.color === 'function')) {
 							style.color = this.props.style.color(item.child, index);
 						}
