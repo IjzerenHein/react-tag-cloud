@@ -24,8 +24,8 @@
     "build": "webpack"
   },
   "dependencies": {
-    "react-measure": "^2.0.2"
     "d3-cloud": "^1.2.5",
+    "react-measure": "^2.1.2"
   },
   "peerDependencies": {
     "prop-types": "^15.6.0",
