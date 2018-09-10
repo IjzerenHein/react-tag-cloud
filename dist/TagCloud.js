@@ -196,12 +196,12 @@ var TagCloud = function (_Component) {
 							fontSize: item.size,
 							fontWeight: item.weight,
 							fontStyle: item.style,
-							transform: 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)',
 							width: item.width,
 							textAlign: 'center',
 							whiteSpace: 'nowrap',
 							transformOrigin: 'center bottom'
 						});
+						if (!("transform" in document.body.style)) style["WebkitTransform"] = 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)';else style["transform"] = 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)';
 						if (!style.color && _this3.props.style.color && typeof _this3.props.style.color === 'function') {
 							style.color = _this3.props.style.color(item.child, index);
 						}
