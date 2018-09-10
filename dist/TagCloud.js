@@ -189,6 +189,7 @@ var TagCloud = function (_Component) {
 						var y = item.y;
 						y += item.y0;
 						y += height / 2;
+						var transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)';
 						var style = _extends({
 							position: 'absolute'
 						}, item.child.props.style, {
@@ -199,9 +200,13 @@ var TagCloud = function (_Component) {
 							width: item.width,
 							textAlign: 'center',
 							whiteSpace: 'nowrap',
-							transformOrigin: 'center bottom'
+							transformOrigin: 'center bottom',
+							WebkitTransform: transform,
+							MozTransform: transform,
+							MsTransform: transform,
+							OTransform: transform,
+							transform: transform
 						});
-						if (!("transform" in document.body.style)) style["WebkitTransform"] = 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)';else style["transform"] = 'translate(' + x + 'px,' + y + 'px) rotate(' + item.rotate + 'deg)';
 						if (!style.color && _this3.props.style.color && typeof _this3.props.style.color === 'function') {
 							style.color = _this3.props.style.color(item.child, index);
 						}
