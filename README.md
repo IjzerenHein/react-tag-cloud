@@ -4,7 +4,7 @@ Create beautiful tag/word clouds using React. Uses the wonderful [d3-cloud](http
 ![react-tag-cloud-image](./react-tag-cloud.gif)
 
 
-[View live demo here](https://stackblitz.com/edit/react-tag-cloud?file=App.js) [(fullscreen)](https://react-tag-cloud.stackblitz.io/)
+[View live demo here](https://react-tag-cloud.stackblitz.io/) [(edit code)](https://stackblitz.com/edit/react-tag-cloud?file=App.js)
 
 
 ## Installation
