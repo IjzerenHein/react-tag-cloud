@@ -12,7 +12,8 @@
     "react-words",
     "react-tags"
   ],
-  "main": "dist/TagCloud.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "repository": "https://github.com/IjzerenHein/react-tag-cloud",
   "author": "IjzerenHein <hrutjes@gmail.com>",
   "license": "MIT",
@@ -21,24 +22,23 @@
     "dist"
   ],
   "scripts": {
-    "build": "webpack"
+    "build": "rm -rf ./dist && yarn lint && tsc",
+    "lint": "tslint -c tslint.json --project tsconfig.json"
   },
   "dependencies": {
     "d3-cloud": "^1.2.5",
-    "react-measure": "^2.1.2"
+    "react-measure": "^2.2.4"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.2",
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "webpack": "^3.8.1"
+    "@types/d3-cloud": "^1.2.2",
+    "@types/react": "^16.8.8",
+    "@types/react-measure": "^2.0.5",
+    "tslint": "^5.14.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3333"
   }
 }
