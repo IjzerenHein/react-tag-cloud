@@ -74,7 +74,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
     wrappedChildren: [],
   };
 
-  private isMounted = false;
+  private mounted = false;
   private resizeTimer?: number = undefined;
 
   private fontFamily = this.getStyleValue.bind(this, "fontFamily");
@@ -84,11 +84,11 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
   private padding = this.getStyleValue.bind(this, "padding");
 
   public componentDidMount() {
-    this.isMounted = true;
+    this.mounted = true;
   }
 
   public componentWillUnmount() {
-    this.isMounted = false;
+    this.mounted = false;
   }
 
   public calculateLayout(
@@ -266,7 +266,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
       }
       this.resizeTimer = setTimeout(() => {
         this.resizeTimer = undefined;
-        if (this.isMounted) {
+        if (this.mounted) {
           this.setState({
             height,
             width,
@@ -282,7 +282,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
 
     if (width && height && children !== this.state.children) {
       this.calculateLayout(this.props, this.state).then((wrappedChildren) => {
-        if (!this.isMounted) {
+        if (!this.mounted) {
           return;
         }
         this.setState({
