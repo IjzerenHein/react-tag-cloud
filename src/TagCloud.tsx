@@ -268,6 +268,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
         this.resizeTimer = undefined;
         if (this.mounted) {
           this.setState({
+            children: undefined,
             height,
             width,
           });

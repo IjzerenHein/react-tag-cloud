@@ -4,7 +4,7 @@ Create beautiful tag/word clouds using React.
 
 ## [Unreleased]
 
-## [1.3.0] - 2019-03-13
+## [1.3.1] - 2019-03-13
 
 ### Added
 
