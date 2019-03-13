@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import randomColor from 'randomcolor';
-import TagCloud from 'react-tag-cloud';
-import CloudItem from './CloudItem';
+import React, { Component } from "react";
+import randomColor from "randomcolor";
+import TagCloud from "react-tag-cloud";
+import CloudItem from "./CloudItem";
 
 const styles = {
   large: {
     fontSize: 60,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
   small: {
     opacity: 0.7,
@@ -23,47 +23,48 @@ class App extends Component {
 
   render() {
     return (
-      <div className='app-outer'>
-        <div className='app-inner'>
+      <div className="app-outer">
+        <div className="app-inner">
           <h1>react-tag-cloud demo</h1>
-          <TagCloud 
-            className='tag-cloud'
+          <TagCloud
+            className="tag-cloud"
             rotate={() => Math.round(Math.random()) * 90}
             style={{
-              fontFamily: 'sans-serif',
+              fontFamily: "sans-serif",
               // fontSize: () => Math.round(Math.random() * 50) + 16,
               fontSize: 30,
-              color: () => randomColor({
-                hue: 'blue'
-              }),
-              padding: 5,
-            }}>
+              color: () =>
+                randomColor({
+                  hue: "blue"
+                }),
+              padding: 5
+            }}
+          >
             <div
               style={{
-                fontFamily: 'serif',
+                fontFamily: "serif",
                 fontSize: 40,
-                fontStyle: 'italic',
-                fontWeight: 'bold',
+                fontStyle: "italic",
+                fontWeight: "bold",
                 color: randomColor()
-              }}>Futurama</div>
+              }}
+            >
+              Futurama
+            </div>
             <CloudItem text="Custom item, Hover me!" />
             <CloudItem text="Custom item 2, Hover me!" />
             <div style={styles.large}>Transformers</div>
             <div style={styles.large}>Simpsons</div>
             <div style={styles.large}>Dragon Ball</div>
             <div style={styles.large}>Rick & Morty</div>
-            <div style={{fontFamily: 'courier'}}>He man</div>
-            <div style={{fontSize: 30}}>World trigger</div>
-            <div style={{fontStyle: 'italic'}}>Avengers</div>
-            <div style={{fontWeight: 200}}>Family Guy</div>
-            <div style={{color: 'green'}}>American Dad</div>
+            <div style={{ fontFamily: "courier" }}>He man</div>
+            <div style={{ fontSize: 30 }}>World trigger</div>
+            <div style={{ fontStyle: "italic" }}>Avengers</div>
+            <div style={{ fontWeight: 200 }}>Family Guy</div>
+            <div style={{ color: "green" }}>American Dad</div>
             <div className="tag-item-wrapper">
-              <div>
-                Hover Me Please!
-              </div>
-              <div className="tag-item-tooltip">
-                HOVERED!
-              </div>
+              <div>Hover Me Please!</div>
+              <div className="tag-item-tooltip">HOVERED!</div>
             </div>
             <div>Gobots</div>
             <div>Thundercats</div>
