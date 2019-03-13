@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "rm -rf ./dist && yarn lint && tsc",
-    "lint": "tslint -c tslint.json --project tsconfig.json"
+    "lint": "tslint -c tslint.json --project tsconfig.json --fix"
   },
   "dependencies": {
     "d3-cloud": "^1.2.5",
