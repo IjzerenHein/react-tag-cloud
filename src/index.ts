@@ -1,1 +1,2 @@
-export * from "./TagCloud";
+import TagCloud from "./TagCloud";
+export default TagCloud;

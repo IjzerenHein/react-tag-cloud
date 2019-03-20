@@ -4,6 +4,12 @@ Create beautiful tag/word clouds using React.
 
 ## [Unreleased]
 
+## [1.3.2] - 2019-03-20
+
+### Fixed
+
+- Fixed default import error when using TypeScript
+
 ## [1.3.1] - 2019-03-13
 
 ### Added
