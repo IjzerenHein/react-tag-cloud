@@ -23,6 +23,7 @@ interface ITagCloudProps {
     | "rectangular"
     | ((size: number) => (t: number) => [number, number]);
   random?: () => number;
+  disableResize: boolean;
 }
 
 interface ITagCloudState {
@@ -53,6 +54,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
       ]),
       padding: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
     }),
+    disableResize: PropTypes.bool,
   };
 
   public static defaultProps = {
@@ -66,6 +68,7 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
       fontWeight: "normal",
       padding: 1,
     },
+    disableResize: false,
   };
   public state = {
     children: undefined,
@@ -257,6 +260,10 @@ class TagCloud extends React.Component<ITagCloudProps, ITagCloudState> {
           height,
           width,
         });
+        return;
+      }
+
+      if (this.props.disableResize) {
         return;
       }
 
