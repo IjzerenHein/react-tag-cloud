@@ -1,3 +1,9 @@
+# THIS REPOSITORY IS NO LONGER MAINTAINED
+
+Looking for an alternative? Please have a look at [react-tagcloud](https://github.com/madox2/react-tagcloud).
+
+If you are interested in maintaining this repository (and taking ownership of it), please reach out to me [here](mailto:hrutjes@gmail.com).
+
 # react-tag-cloud ☁️
 Create beautiful tag/word clouds using React. Uses the wonderful [d3-cloud](https://github.com/jasondavies/d3-cloud) under the hood.
 
