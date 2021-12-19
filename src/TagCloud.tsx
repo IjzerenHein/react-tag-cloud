@@ -6,6 +6,7 @@ import Measure from "react-measure";
 
 interface ITagCloudProps {
   children: any;
+  className?: string;
   style: {
     fontFamily?: string | ((word: any, index: number) => string);
     fontStyle?: string | ((word: any, index: number) => string);
